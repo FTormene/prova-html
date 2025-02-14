@@ -1,4 +1,12 @@
 /* Impostazioni di base */
+*,
+*:before,
+*:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -23,6 +31,7 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 .pulsanti {
     margin: auto;
@@ -41,6 +50,14 @@ header {
     font-weight: bold;
     background-color: #2f7031;
 }
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
 /* Colonna di sinistra */
 menu {
@@ -48,6 +65,10 @@ menu {
     margin: 0px;
     background-color: #f4f4f4;
     padding: 20px;
+}
+
+#titolo_header {
+    display: none;
 }
 
 /* Contenuto principale */
@@ -90,4 +111,58 @@ h1 {
 }
 .centrato {
     text-align: center;
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    .layout-container {
+        display: block;
+    }
+    header, menu, main, footer {
+        width: 100%;
+        padding: 10px;
+    }
+    #titolo_header {
+        display: block;
+    }
+    .pulsanti {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Due colonne */
+        gap: 10px; /* Spazio tra i bottoni */
+        width: 100%;
+        padding: 5px;
+    }
+    header {
+        padding: 5px;
+    }
+    .button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .hamburger {
+        display: block;
+    }
+    header, menu {
+        display: none;
+    }
+    header.active, menu.active {
+        display: block;
+    }
+    
+    #kobe-right {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Media query per schermi più piccoli */
+@media (max-width: 480px) {
+    .pulsanti {
+        display: block; /* Disposizione su una colonna */
+    }
+    .button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
