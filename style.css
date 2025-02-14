@@ -1,0 +1,93 @@
+/* Impostazioni di base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Impostazioni per il layout Grid */
+.layout-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 1 parte per la colonna sinistra, 3 per la colonna destra */
+    grid-template-rows: auto 1fr auto; /* Header, contenuto principale, footer */
+    grid-template-areas: 
+        "header header"
+        "menu main"
+        "footer footer";
+    height: 100vh;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.pulsanti {
+    margin: auto;
+}
+.button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #39883c;
+    color: white;
+    text-decoration: none;
+    width: 130px;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+}
+.button:hover, .corrente{
+    font-weight: bold;
+    background-color: #2f7031;
+}
+
+/* Colonna di sinistra */
+menu {
+    grid-area: menu;
+    margin: 0px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Contenuto principale */
+main {
+    grid-area: main;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 72px;
+}
+.page-container {
+    max-width: 1200px;
+    margin: auto;
+}
+#kobe-right {
+    float: right;
+    width: 30%;
+    margin-left: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 3px;
+}
+#kobe-right img {
+    width: 100%;
+}
+#kobe-right p {
+    margin: 0 5px;
+    text-align: center;
+}
+.centrato {
+    text-align: center;
+}
