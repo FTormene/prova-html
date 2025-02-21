@@ -36,10 +36,19 @@
         <main>
             <div class="hamburger" onclick="toggleMenu()">☰</div>
             <h1 id="kobe-bryant">Kobe Bryant</h1>
+
             <div id="kobe-right">
-                <img src="immagini/kobe.jpg" alt="immagine di kobe bryant">
+                <img src="immagini/kobe.jpg" alt="immagine di kobe bryant" onclick="openModal()">
                 <p>Kobe Bryant nel 2005</p>
             </div>
+
+            <!-- Overlay and Modal -->
+            <div id="overlay" onclick="closeModal()"></div>
+            <div id="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modal-img" src="immagini/kobe.jpg" alt="immagine di kobe bryant">
+            </div>
+
             <p>
                 <b>Kobe Bean Bryant</b> (<i>Filadelfia, 23 agosto 1978 - Calabasas, 26 gennaio 2020</i>) è stato un cestista statunitense.
             </p>
