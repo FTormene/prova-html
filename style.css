@@ -170,10 +170,18 @@ h1 {
         display: block;
     }
     header, menu {
-        display: none;
+        /* display: none; */
+        height: 0px;
+        /* padding: 0; */
+        opacity: 0;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+        /* transition: padding 0.5s ease-in-out; */
     }
     header.active, menu.active {
-        display: block;
+        /* display: block; */
+        /* padding: 20px; */
+        opacity: 1;
     }
     
     #kobe-right {
