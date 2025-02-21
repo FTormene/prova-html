@@ -22,6 +22,8 @@ body {
         "menu main"
         "footer footer";
     height: 100vh;
+    max-width: 1600px;
+    margin: auto;
 }
 
 /* Header */
@@ -65,6 +67,31 @@ menu {
     margin: 0px;
     background-color: #f4f4f4;
     padding: 20px;
+}
+
+menu ul {
+    list-style-type: none; /* Rimuove i punti elenco */
+    padding-left: 5px; /* Rimuove il padding a sinistra */
+}
+
+menu li {
+    padding: 3px 0; /* Aggiunge spazio sopra e sotto */
+}
+
+menu ul ul {
+    padding-left: 15px; /* Riduce il rientro a sinistra per ogni livello */
+}
+menu ul ul ul {
+    padding-left: 25px; /* Riduce il rientro a sinistra per ogni livello */
+}
+
+menu a {
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    color: inherit; /* Mantiene il colore del testo */
+}
+
+menu a:hover {
+    text-decoration: underline; /* Aggiunge la sottolineatura al passaggio del mouse */
 }
 
 #titolo_header {
